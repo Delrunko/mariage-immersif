@@ -1,0 +1,4 @@
+Site de mariage immersif - Million's Dev
+Ouvrir index.html (7 pages dont programme.html). Tout se personnalise dans js/donnees.js (noms, dates, photos, musiques, proches).
+Photos : remplacer les liens par assets/images/xxx.jpg. Musiques : assets/musiques/xxx.mp3.
+Mode projection : bouton en haut (fleches = scenes, espace = pause, Echap = quitter).
