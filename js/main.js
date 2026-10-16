@@ -15,7 +15,7 @@ const W=window.W={D,$,$$,ph,RM,audio,toggle,setTrack,get ti(){return ti},pages:{
 W.boot=function(){
  const env=P=='index'&&!ss.get('env');document.title=`${D.a.nom} & ${D.b.nom} — Mariage`;
  document.body.insertAdjacentHTML('afterbegin',`<div id="pre"><i class="cl"></i><i class="cr"></i><div class="sig"><span>Un site signé</span><b>${D.signature}</b>${env?`<button class="env" aria-label="Ouvrir l'invitation"><u class="seal">${D.a.nom[0]}${D.b.nom[0]}</u></button><small>Cliquez sur le sceau pour ouvrir l'invitation</small>`:''}</div></div>
- <header><a class="logo" href="index.html">${D.a.nom} & ${D.b.nom}</a><button class="ib" id="mus">♪</button><button class="ib" id="prj">▶<span class="tx"> Projection</span></button><button id="bg" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></header>
+ <header><a class="logo" href="index.html">${D.a.nom} & ${D.b.nom}</a><nav class="tn">${NAV.map(([h,t])=>`<a href="${h}.html" class="${h==P?'on':''}">${t}</a>`).join('')}</nav><button class="ib" id="mus">♪</button><button class="ib" id="prj">▶<span class="tx"> Projection</span></button><button id="bg" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></header>
  <div id="menu"><nav>${NAV.map(([h,t])=>`<a href="${h}.html" class="${h==P?'on':''}">${t}</a>`).join('')}</nav><p>${D.signature}</p></div>`);
  $('#app').innerHTML=W.pages[P]();
  $('#app').insertAdjacentHTML('afterend',`<footer><small>Cette histoire d'amour a été mise en lumière par</small><b>${D.signature}</b><small>Sites de mariage sur mesure pour les mairies, les familles et les événements</small></footer>`);
